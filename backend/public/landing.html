@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskPro - Multi-Tenant Task Management</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <style>
+    .landing-container {
+      max-width: 900px;
+      margin: 4rem auto;
+      background: rgba(255,255,255,0.10);
+      border-radius: 18px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+      padding: 3rem 2.5rem 2.5rem 2.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      gap: 2.5rem;
+    }
+    .landing-info {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .landing-title {
+      font-size: 2.7rem;
+      font-weight: bold;
+      margin-bottom: 1.2rem;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .landing-desc {
+      font-size: 1.25rem;
+      color: #f6f6f6;
+      margin-bottom: 2.2rem;
+    }
+    .landing-cta {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .landing-cta a {
+      background: #e94560;
+      color: #fff;
+      padding: 0.9rem 2.2rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .landing-cta a:hover {
+      background: #16213e;
+    }
+    .landing-auth {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .landing-auth .auth-group {
+      background: rgba(255,255,255,0.07);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      min-width: 220px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: flex-end;
+    }
+    .landing-auth .auth-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffd700;
+      margin-bottom: 0.3rem;
+      align-self: flex-start;
+    }
+    .landing-auth a {
+      color: #fff;
+      background: #1a1a2e;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 0.2rem;
+      transition: background 0.2s;
+    }
+    .landing-auth a:hover {
+      background: #e94560;
+    }
+  </style>
+</head>
+<body>
+  <div class="landing-container">
+    <div class="landing-info">
+      <div class="landing-title">Welcome to TaskPro</div>
+      <div class="landing-desc">
+        A modern, multi-tenant task management platform for organizations.<br>
+        Assign, track, and manage tasks across teams with role-based access for Admins, Managers, and Members.<br>
+        <br>
+        <b>Features:</b> Multi-organization support, role-based dashboards, real-time task status, and more.
+      </div>
+      <div class="landing-cta">
+        <a href="/register?role=member">Register as Member</a>
+        <a href="/register?role=manager">Register as Manager</a>
+      </div>
+    </div>
+    <div class="landing-auth">
+      <div class="auth-group">
+        <div class="auth-title">Admin</div>
+        <a href="/login?role=admin">Login as Admin</a>
+      </div>
+      <div class="auth-group">
+        <div class="auth-title">Manager</div>
+        <a href="/login?role=manager">Login as Manager</a>
+        <a href="/register?role=manager">Register as Manager</a>
+      </div>
+      <div class="auth-group">
+        <div class="auth-title">Member</div>
+        <a href="/login?role=member">Login as Member</a>
+        <a href="/register?role=member">Register as Member</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
